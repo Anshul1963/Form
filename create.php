@@ -23,7 +23,7 @@
             $nameErr = "*Name is required";
             $error = 1;
         }
-        elseif (!preg_match("/^[a-zA-Z ]*$/",$Name)){
+        elseif(!preg_match("/^[a-zA-Z ]*$/",$Name)){
             $nameErr = "*Only alphabets and white space are allowed";
             $error= 1;
         } 

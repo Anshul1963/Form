@@ -18,16 +18,16 @@
     $sql = "SELECT * FROM user_details LIMIT $offset, $limit";
     $result = $connection->query($sql);
     
-    
+
     //SEARCH
     if(isset($_POST['search-input']))
-    { 
+    {   
         $searchBy = $_POST['searchBy'];
-        $value = $_POST['search-input'];
+        $value = $_POST['search-input'];     
         $sql = "SELECT * FROM `user_details` WHERE ".$searchBy." LIKE '%".$value."%'";
-        $result = $connection->query($sql);
-        
+        $result = $connection->query($sql);   
     }
+
 
     //SORTING
     $orderBy = "id";
@@ -286,7 +286,7 @@
                 <option value="address" name="searchBy">Address</option>
                 <option value="state" name="searchBy">State</option>
                 <option value="gender" name="searchBy">Gender</option>
-                <option value="message" name="searchBy">Message</option> 
+                <option value="message" name="searchBy">Message</option>
             </select>
         </form>
 
@@ -323,7 +323,6 @@
                 </tr>
                 <?php   
                     }
-                
                 ?>
             </tbody>
         </table>
