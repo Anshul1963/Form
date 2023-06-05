@@ -25,7 +25,7 @@
                 $_SESSION['name'] = $data['user_name'];
                 $_SESSION['password'] = $data['password'];
                 $_SESSION['id'] = $data['id'];
-                header("Location: create.php?loggedIn=1");
+                header("Location: create.php");
                 exit();
             }
             else{

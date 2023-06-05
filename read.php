@@ -2,7 +2,6 @@
     include "config.php";
     session_start();
    
-    $loggedIn = $_GET['loggedIn'];
     //PAGINATION
     if (isset($_GET['pageno'])) {
         $pageNo = $_GET['pageno'];
@@ -22,7 +21,8 @@
     
     //SEARCH
     if(isset($_POST['search-input']))
-    {   $searchBy = $_POST['searchBy'];
+    { 
+        $searchBy = $_POST['searchBy'];
         $value = $_POST['search-input'];
         $sql = "SELECT * FROM `user_details` WHERE ".$searchBy." LIKE '%".$value."%'";
         $result = $connection->query($sql);
@@ -30,11 +30,10 @@
     }
 
     //SORTING
+    $orderBy = "id";
+    $order = "asc";
     if(isset($_GET['orderBy']) && isset($_GET['order']))
     {
-        $orderBy = "id";
-        $order = "asc";
-
         if(!empty($_GET["orderBy"])){
             $orderBy = $_GET["orderBy"];
         }
@@ -72,7 +71,7 @@
             $messageNextOrder = 'desc';
         }
     
-        $sql = "SELECT * FROM `user_details` ORDER BY ".$orderBy." ".$order;
+        $sql = "SELECT * FROM `user_details` ORDER BY ".$orderBy." ".$order." LIMIT $offset, $limit";
         $result = $connection->query($sql);
     }
 ?>
@@ -265,9 +264,9 @@
             <h4>LOGO</h4>
         </div>
         <ul class="nav-link">
-            <li><a href="create.php?loggedIn=1">Add</a></li>
+            <li><a href="create.php">Add</a></li>
             <?php
-                if(isset($loggedIn))
+                if(isset($_SESSION['name']))
                 {
             ?>
             <li><a href="logout.php">Logout</a></li>
@@ -288,7 +287,9 @@
                 <option value="state" name="searchBy">State</option>
                 <option value="gender" name="searchBy">Gender</option>
                 <option value="message" name="searchBy">Message</option>
+                
             </select>
+            
         </form>
 
         <table class="table">
@@ -334,9 +335,9 @@
         ?>
         <div class="page-num">
             <ul class="pagination" >
-                <li><a href="<?php if($pageNo <= 1){ echo '#'; } else { echo "?pageno=".($pageNo - 1)."&loggedIn=1"; } ?>">Prev</a></li>
+                <li><a href="<?php if($pageNo <= 1){ echo '#'; } else { echo "?pageno=".($pageNo - 1)."&orderBy=".$orderBy."&order=".$order; } ?>">Prev</a></li>
                 <li class="page-number"><?php echo $pageNo;?></li>
-                <li><a href="<?php if($pageNo >= $totalPages){ echo '#'; } else { echo "?pageno=".($pageNo + 1)."&loggedIn=1"; } ?>">Next</a></li>
+                <li><a href="<?php if($pageNo >= $totalPages){ echo '#'; } else { echo "?pageno=".($pageNo + 1)."&orderBy=".$orderBy."&order=".$order; } ?>">Next</a></li>
             </ul>
         </div>
         <?php 

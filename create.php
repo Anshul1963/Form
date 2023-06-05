@@ -3,14 +3,13 @@
     session_start();
     $error = NULL;
     $nameErr = $emailErr = $mobileErr = $addressErr = $genderErr = $stateErr = "";
-    $loggedIn = $_GET['loggedIn'];
     $loginErr = "";
     if(empty($_SESSION['name']))
     {
         $loginErr = "Login To Add Data!";
     }
 
-    if(isset($_POST['submit']) && !empty($loggedIn))  {
+    if(isset($_POST['submit']) && !empty($_SESSION['name']))  {
         $Name = $_POST['name'];
         $Email = $_POST['email'];
         $Mobile = $_POST['mobile'];
@@ -217,16 +216,16 @@
             <h4>LOGO</h4>
         </div>
         <ul class="nav-link">
-            <li><a href="read.php?loggedIn=1">View</a></li>
             <?php
-                if($loggedIn == "1")
+                if(isset($_SESSION['name']))
                 {
             ?>
+            <li><a href="read.php">View</a></li>
             <li><a href="logout.php">Logout</a></li>
             
             <?php
                 }
-                if (!isset($loggedIn))
+                if (!isset($_SESSION['name']))
                 {  
             ?>
             <li><a href="login.php">Login</a></li> 
