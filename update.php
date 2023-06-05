@@ -47,17 +47,14 @@
             $mobileErr = "*Enter 10 digit mobile no.";
             $error = 1;
         }
-
         if(empty($Address)){
             $addressErr = "*Field can't be empty";
             $error = 1;
         }
-
         if(empty($Gender)){
             $genderErr = "*Select a gender";
             $error = 1;
         }
-
         if(empty($Message)){
             $messageErr = "*Enter message";
             $error = 1;

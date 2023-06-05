@@ -4,6 +4,7 @@
     $passErr = $repassErr = $codeErr = "";
     $passNotMatched = "";
     $Email = "";
+    $otp = "";
     if(isset($_GET['email'])){
         $Email = $_GET['email'];
     }
@@ -27,19 +28,20 @@
         }
         $sql2 = "SELECT code FROM `accounts` WHERE `code` = '$Code' ";
         $result2 = $connection->query($sql2);
-        if(!empty($Password) && !empty($RePassword) && ($Password === $RePassword) && $result2)
+        $data = $result2->fetch_assoc();
+        if(!empty($Password) && !empty($RePassword) && ($Password === $RePassword) && ($data['code'] === $Code) )
         {
             $sql = "UPDATE `accounts` SET `password`='$Password' WHERE `email`='$Email'";
             $result = $connection->query($sql);
             if($result){
-                header("location: login.php");
+                header("location: resetPass.php");
             }
             else{
                 echo "Error !";
             }
         }
         else{
-          echo"error in update loop";
+          $otp = "OTP Not Matched !";
         }
     }
 ?>
@@ -130,6 +132,7 @@
     </style>
   </head>
   <body> 
+    <span class="passNotMatched"><?php echo $otp;?></span>
     <form action="" method="POST">
         <div class="title">RESET PASSWORD</div>
         <h2>Welcome to CRUD</h2>

@@ -277,8 +277,8 @@
         <p>LIST OF USERS</p>
 
         <form action="" method="POST">
-            <input type="text" placeholder="Search by" name="search-input">&nbsp;
-            <select id="searchBy" name="searchBy">
+            <input type="text" placeholder="Search" name="search-input">&nbsp;
+            <select id="searchBy" name="searchBy" >
                 <option value="name" name="searchBy">Name</option>
                 <option value="email" name="searchBy">Email</option>
                 <option value="mobile" name="searchBy">Mobile</option>
