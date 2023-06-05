@@ -1,6 +1,7 @@
 <?php 
     include "config.php";
     session_start();
+   
     $loggedIn = $_GET['loggedIn'];
     //PAGINATION
     if (isset($_GET['pageno'])) {
@@ -25,6 +26,7 @@
         $value = $_POST['search-input'];
         $sql = "SELECT * FROM `user_details` WHERE ".$searchBy." LIKE '%".$value."%'";
         $result = $connection->query($sql);
+        
     }
 
     //SORTING
@@ -294,10 +296,10 @@
                 <tr class="table-heading">
                     <th style="width:10%"><a href="?orderBy=name&order=<?php echo $nameNextOrder;?>">Name</a></th>
                     <th style="width:17%"><a href="?orderBy=email&order=<?php echo $emailNextOrder;?>">Email</a></th>
-                    <th style="width:8%"><a href="?orderBy=mobile&order=<?php echo $mobileNextOrder;?>">Mobile</a></th>
+                    <th style="width: 8%"><a href="?orderBy=mobile&order=<?php echo $mobileNextOrder;?>">Mobile</a></th>
                     <th style="width:10%"><a href="?orderBy=address&order=<?php echo $addressNextOrder; ?>">Address</a></th>
-                    <th style="width:6%"><a href="?orderBy=state&order=<?php echo $stateNextOrder; ?>">State</a></th>
-                    <th style="width:8%"><a href="?orderBy=gender&order=<?php echo $genderNextOrder; ?>">Gender</a></th>
+                    <th style="width: 6%"><a href="?orderBy=state&order=<?php echo $stateNextOrder; ?>">State</a></th>
+                    <th style="width: 8%"><a href="?orderBy=gender&order=<?php echo $genderNextOrder; ?>">Gender</a></th>
                     <th style="width:20%"><a href="?orderBy=message&order=<?php echo $messageNextOrder; ?>">Message</a></th>
                     <th style="width:13%">Action</th>
                 </tr>
