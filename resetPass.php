@@ -41,7 +41,7 @@
             }
         }
         else{
-          $otp = "OTP Not Matched !";
+          $otp = "Verification Code Not Matched !";
         }
     }
 ?>
