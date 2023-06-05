@@ -16,17 +16,6 @@
     $totalPages = ceil($totalRows / $limit);
     $sql = "SELECT * FROM user_details LIMIT $offset, $limit";
     $result = $connection->query($sql);
-    
-
-    //SEARCH
-    if(($_POST['search-input']))
-    {   
-        $searchBy = $_POST['searchBy'];
-        $value = $_POST['search-input'];    
-        $sql = "SELECT * FROM `user_details` WHERE ".$searchBy." LIKE '%".$value."%'";
-        $result = $connection->query($sql);  
-    }
-
 
     //SORTING
     $orderBy = "id";
@@ -72,6 +61,15 @@
     
         $sql = "SELECT * FROM `user_details` ORDER BY ".$orderBy." ".$order." LIMIT $offset, $limit";
         $result = $connection->query($sql);       
+    }
+
+    //SEARCH
+    if(($_POST['search-input']))
+    {   
+        $searchBy = $_POST['searchBy'];
+        $value = $_POST['search-input'];    
+        $sql = "SELECT * FROM `user_details` WHERE ".$searchBy." LIKE '%".$value."%'";
+        $result = $connection->query($sql);  
     }
 ?>
 
