@@ -34,7 +34,7 @@
             $sql = "UPDATE `accounts` SET `password`='$Password' WHERE `email`='$Email'";
             $result = $connection->query($sql);
             if($result){
-                header("location: resetPass.php");
+                header("location: login.php");
             }
             else{
                 echo "Error !";
