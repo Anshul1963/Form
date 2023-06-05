@@ -306,8 +306,9 @@
                 </tr>
             </thead>
             <tbody>
-                <?php    
-                    while($data = $result->fetch_assoc()){
+                <?php   
+                    
+                    while(isset($_SESSION['name']) && $data = $result->fetch_assoc()){
                 ?>
 
                 <tr class="table-data">
@@ -325,6 +326,7 @@
                 </tr>
                 <?php   
                     }
+                
                 ?>
             </tbody>
         </table>
