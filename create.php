@@ -5,6 +5,10 @@
     $nameErr = $emailErr = $mobileErr = $addressErr = $genderErr = $stateErr = "";
     $loggedIn = $_GET['loggedIn'];
     $loginErr = "";
+    if(empty($_SESSION['name']))
+    {
+        $loginErr = "Login To Add Data!";
+    }
 
     if(isset($_POST['submit']) && !empty($loggedIn))  {
         $Name = $_POST['name'];
@@ -24,7 +28,6 @@
             $nameErr = "*Only alphabets and white space are allowed";
             $error= 1;
         } 
-
         if(empty($Email)){
             $emailErr = "*Email is Required";
             $error = 1;
@@ -33,7 +36,6 @@
             $emailErr = "*Invalid Email Address";
             $error = 1;
         }
-
         if(empty($Mobile)){
             $mobileErr = "*Enter Mobile No.";
             $error = 1;
@@ -46,17 +48,14 @@
             $mobileErr = "*Enter 10 digit mobile no.";
             $error = 1;
         }
-
         if(empty($Address)){
             $addressErr = "*Field can't be empty";
             $error = 1;
         }
-
         if(empty($Gender)){
             $genderErr = "*Select a gender";
             $error = 1;
         }
-
         if(empty($State)){
             $stateErr = "*Select state";
             $error = 1;
@@ -76,9 +75,6 @@
             $connection->close();
         }     
     } 
-    elseif(isset($_POST['submit']) && empty($loggedIn)){
-            $loginErr = "Login to add data!";   
-    }  
 ?>
 
 <!DOCTYPE html>

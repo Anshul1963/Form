@@ -1,6 +1,5 @@
 <?php
     include "config.php";
-    session_start();
 
     $error = NULL;
     $nameErr = $emailErr = $mobileErr = $addressErr = $genderErr = $messageErr = "";
@@ -34,7 +33,6 @@
             $emailErr = "*Invalid Email Address";
             $error = 1;
         }
-
         if(empty($Mobile)){
             $mobileErr = "*Enter Mobile No.";
             $error = 1;

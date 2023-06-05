@@ -29,6 +29,11 @@
         $sql2 = "SELECT code FROM `accounts` WHERE `code` = '$Code' ";
         $result2 = $connection->query($sql2);
         $data = $result2->fetch_assoc();
+
+        if($data['code'] !== $Code){
+            $otp = "Verification Code Not Matched !";
+        }
+
         if(!empty($Password) && !empty($RePassword) && ($Password === $RePassword) && ($data['code'] === $Code) )
         {
             $sql = "UPDATE `accounts` SET `password`='$Password' WHERE `email`='$Email'";
@@ -39,9 +44,6 @@
             else{
                 echo "Error !";
             }
-        }
-        else{
-          $otp = "Verification Code Not Matched !";
         }
     }
 ?>
@@ -137,7 +139,7 @@
         <div class="title">RESET PASSWORD</div>
         <h2>Welcome to CRUD</h2>
         <p>Please reset password to login.</p>
-        <span class="passNotMatched"><?php echo $passNotMatched;?></span><br>
+        <span class="passNotMatched"><?php echo $passNotMatched;?></span>
         <input type="text" name="code" placeholder="Verification Code" class="a"/>
         <span class="error"><?php echo $codeErr;?></span><br>
         <input type="password" name="password" placeholder="New Password" class="a"/>  

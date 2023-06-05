@@ -135,15 +135,6 @@
         font-size:20px;
         display: block;
       }
-      #eye{
-        margin-left: -35px; 
-        cursor: pointer;
-        border:none;
-        border-radius:10px;
-      }
-      #eye:hover{
-        background-color: grey;
-      }
       #forgot{
         display: flex;
         justify-content: space-between;
@@ -164,7 +155,6 @@
         <input type="text" name="userName" placeholder="User Name" value="<?php echo $userName;?>" class="a"/>
         <span class="error"><?php echo $unameErr;?></span><br>
         <input type="password" name="password" placeholder="Password" value="<?php echo $pass;?>" class="a"/>
-        <button id="eye" name="eye-btn">S</button>
         <span class="error"><?php echo $passErr;?></span><br>
         <div id="forgot">
             <div><input type="checkbox" name="newsletter" >&nbsp;Remember Me</div> 
