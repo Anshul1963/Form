@@ -73,7 +73,7 @@
         margin:5px 0;
       }
       .a{
-        width: 98%;
+        width: 100%;
         height:45px;
         padding: 7px;
         margin: 18px 0 0 0;
