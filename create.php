@@ -1,5 +1,6 @@
 <?php
     include "config.php";
+    session_start();
     $error = NULL;
     $nameErr = $emailErr = $mobileErr = $addressErr = $genderErr = $stateErr = "";
     $loggedIn = $_GET['loggedIn'];

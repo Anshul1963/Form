@@ -17,7 +17,7 @@
     
       if(!empty($uname) && !empty($pass))
       {
-        $sql = "SELECT * FROM `accounts` WHERE user_name='$uname' AND password='$pass'";
+        $sql = "SELECT * FROM `accounts` WHERE `user_name`='$uname' AND `password`='$pass' ";
         $result = $connection->query($sql);
         if (mysqli_num_rows($result) === 1) {
             $data = mysqli_fetch_assoc($result);

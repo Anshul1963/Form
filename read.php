@@ -1,5 +1,6 @@
 <?php 
     include "config.php";
+    session_start();
     $loggedIn = $_GET['loggedIn'];
     //PAGINATION
     if (isset($_GET['pageno'])) {
