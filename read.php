@@ -286,10 +286,8 @@
                 <option value="address" name="searchBy">Address</option>
                 <option value="state" name="searchBy">State</option>
                 <option value="gender" name="searchBy">Gender</option>
-                <option value="message" name="searchBy">Message</option>
-                
+                <option value="message" name="searchBy">Message</option> 
             </select>
-            
         </form>
 
         <table class="table">
@@ -306,8 +304,7 @@
                 </tr>
             </thead>
             <tbody>
-                <?php   
-                    
+                <?php     
                     while(isset($_SESSION['name']) && $data = $result->fetch_assoc()){
                 ?>
 
@@ -315,8 +312,8 @@
                     <td><?php echo $data['name']; ?></td>
                     <td><?php echo $data['email']; ?></td>
                     <td><?php echo $data['mobile']; ?></td>
-                    <td><?php echo $data['address']?></td>
-                    <td><?php echo $data['state']?></td>
+                    <td><?php echo $data['address']; ?></td>
+                    <td><?php echo $data['state']; ?></td>
                     <td><?php echo $data['gender']; ?></td>
                     <td id="message" class="mess"><?php echo $data['message']; ?></td>   
                     <td>
@@ -345,7 +342,6 @@
         <?php 
             }
         ?>
-    
     </div>   
 </body>
 </html>
