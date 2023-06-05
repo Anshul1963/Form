@@ -1,7 +1,6 @@
 <?php 
     include "config.php";
     session_start();
-   
     //PAGINATION
     if (isset($_GET['pageno'])) {
         $pageNo = $_GET['pageno'];
@@ -20,12 +19,12 @@
     
 
     //SEARCH
-    if(isset($_POST['search-input']))
+    if(($_POST['search-input']))
     {   
         $searchBy = $_POST['searchBy'];
-        $value = $_POST['search-input'];     
+        $value = $_POST['search-input'];    
         $sql = "SELECT * FROM `user_details` WHERE ".$searchBy." LIKE '%".$value."%'";
-        $result = $connection->query($sql);   
+        $result = $connection->query($sql);  
     }
 
 
@@ -72,7 +71,7 @@
         }
     
         $sql = "SELECT * FROM `user_details` ORDER BY ".$orderBy." ".$order." LIMIT $offset, $limit";
-        $result = $connection->query($sql);
+        $result = $connection->query($sql);       
     }
 ?>
 
@@ -278,8 +277,8 @@
         <p>LIST OF USERS</p>
 
         <form action="" method="POST">
-            <input type="text" placeholder="Search" name="search-input">&nbsp;
             <select id="searchBy" name="searchBy" >
+                <option value="" name="searchBy"> Search By</option>
                 <option value="name" name="searchBy"> Name</option>
                 <option value="email" name="searchBy">Email</option>
                 <option value="mobile" name="searchBy">Mobile</option>
@@ -287,8 +286,8 @@
                 <option value="state" name="searchBy">State</option>
                 <option value="gender" name="searchBy">Gender</option>
                 <option value="message" name="searchBy">Message</option>
-
             </select>
+            <input type="text" placeholder="Search" name="search-input">
         </form>
 
         <table class="table">
@@ -305,8 +304,8 @@
                 </tr>
             </thead>
             <tbody>
-                <?php     
-                    while(isset($_SESSION['name']) && $data = $result->fetch_assoc()){
+                <?php   
+                    while( $_SESSION['name'] && $data = $result->fetch_assoc()){
                 ?>
 
                 <tr class="table-data">
@@ -323,7 +322,7 @@
                     </td>
                 </tr>
                 <?php   
-                    }
+                    }        
                 ?>
             </tbody>
         </table>
