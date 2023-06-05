@@ -280,13 +280,14 @@
         <form action="" method="POST">
             <input type="text" placeholder="Search" name="search-input">&nbsp;
             <select id="searchBy" name="searchBy" >
-                <option value="name" name="searchBy">Name</option>
+                <option value="name" name="searchBy"> Name</option>
                 <option value="email" name="searchBy">Email</option>
                 <option value="mobile" name="searchBy">Mobile</option>
                 <option value="address" name="searchBy">Address</option>
                 <option value="state" name="searchBy">State</option>
                 <option value="gender" name="searchBy">Gender</option>
                 <option value="message" name="searchBy">Message</option>
+
             </select>
         </form>
 
