@@ -17,6 +17,7 @@
         $State = $_POST['state'];
         $Gender = $_POST['gender'];
         $Message = $_POST['message'];
+        $Message = trim($Message);
         $Newsletter = $_POST['newsletter'];
 
         if(empty($Name)){
