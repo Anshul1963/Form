@@ -34,5 +34,5 @@
             }
         }
     }
-$sendMI = new sendEmail();
+    $sendMI = new sendEmail();
 ?>

@@ -140,7 +140,7 @@
         }
         form{
             height:40px;
-            margin: 0 0 15px 75px;
+            margin: 0 75px 15px 75px;
         }
         form input{
             padding:5px 10px;
@@ -156,6 +156,13 @@
         form button,select{
             padding:5px;
             font-size:15px;
+        }
+        form button{
+            float:right;
+        }
+        form button a{
+            text-decoration: none;
+            color: black;
         }
         table{
             margin:auto;
@@ -287,7 +294,9 @@
                 <option value="message" name="searchBy">Message</option>
             </select>
             <input type="text" placeholder="Search" name="search-input">
+            <button><a href="?orderBy=id&order=asc">Reset</a></button>
         </form>
+        
 
         <table class="table">
             <thead>
