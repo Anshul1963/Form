@@ -3,8 +3,7 @@
 
     session_start();
     $unameErr = $passErr = $loginErr = "";
-    if(isset($_POST['login']))
-    {
+    if(isset($_POST['login'])){
       $uname = $_POST['userName'];
       $pass = $_POST['password'];
 
