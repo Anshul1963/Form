@@ -240,16 +240,16 @@
                 <h2>ADD DETAILS</h2>
             </div>
             <!-- <label>Full Name</label> -->
-            <input type="text" placeholder="Enter full name" name="name" >
+            <input type="text" placeholder="Full name" name="name" >
             <span class="error"><?php echo $nameErr;?></span><br>
             <!-- <label>Email</label> -->
-            <input type="text" placeholder="Enter e-mail address" name="email" >
+            <input type="text" placeholder="E-mail address" name="email" >
             <span class="error"><?php echo $emailErr;?></span><br>
             <!-- <label>Mobile</label> -->
-            <input type="text" placeholder="Enter mobile no." name="mobile" >
+            <input type="text" placeholder="Mobile no." name="mobile" >
             <span class="error"><?php echo $mobileErr;?></span><br>
             <!-- <label>Address</label> -->
-            <input type="text" placeholder="Enter Permanent Address" name="address" >
+            <input type="text" placeholder="Permanent Address" name="address" >
             <span class="error"><?php echo $addressErr;?></span><br>
             <!-- <label>State</label> -->
             <select id="state" name="state">
@@ -266,7 +266,7 @@
                 <input type="radio" value="Others" name="gender" class="radio"><span style="margin-right:200px;">Others</span> </input> 
                 <span class="error"><?php echo $genderErr;?></span><br>
             <!-- <label>Message</label> -->
-            <textarea name="message" rows="2" cols="30" placeholder="Enter message(if any)"></textarea>
+            <textarea name="message" rows="2" cols="30" placeholder="Message(if any)"></textarea>
             <label style="display:inline;">Newsletter:</label>
             <input type="checkbox" name="newsletter" class="radio"><br>
             <button type="submit" name="submit" value="submit">Submit</button>
