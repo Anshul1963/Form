@@ -241,7 +241,7 @@
                 <h2>UPDATE DETAILS</h2>
             </div>
             <!-- <label>ID</label> -->
-            <input type="text" placeholder="Id" name="user_id" value="<?php echo $id; ?>">
+            <input type="text" placeholder="Id" name="user_id" value="<?php echo $id; ?>" readonly>
             <!-- <label>Full Name</label> -->
             <input type="text" placeholder="Enter full name" name="name" value="<?php echo $Name;?>">
             <span class="error"><?php echo $nameErr;?></span><br>

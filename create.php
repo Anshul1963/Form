@@ -40,7 +40,7 @@
             $error = 1;
         }
         elseif(!preg_match("/^[0-9]*$/",$Mobile)){
-            $mobileErr = "*Only numeric values are allowed";
+            $mobileErr = "*Only numbers are allowed";
             $error = 1;
         }
         elseif(strlen($Mobile) <10 || strlen($Mobile) >10){
