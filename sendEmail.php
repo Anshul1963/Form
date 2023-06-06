@@ -15,13 +15,13 @@
                 $mail->isSMTP(); // using SMTP protocol                                     
                 $mail->Host = 'sandbox.smtp.mailtrap.io'; // SMTP host as gmail 
                 $mail->SMTPAuth = true;  // enable smtp authentication                             
-                $mail->Username = 'f4050677ac0293';  // sender gmail host              
-                $mail->Password = '79857e0f9a4e72'; // sender gmail host password                          
-                $mail->SMTPSecure = 'tls';  // for encrypted connection                           
-                $mail->Port = 587;   // port for SMTP     
+                $mail->Username = 'f4050677ac0293';              
+                $mail->Password = '79857e0f9a4e72';                          
+                $mail->SMTPSecure = 'tls';                             
+                $mail->Port = 587;      
                 $mail->isHTML(true); 
-                $mail->setFrom('iamanshulanand@gmail.com', "Anshul"); // sender's email and name
-                $mail->addAddress($Email, "User");  // receiver's email and name
+                $mail->setFrom('iamanshulanand@gmail.com', "Anshul"); 
+                $mail->addAddress($Email, "User");  
                 $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n"; 
                 $mail->Subject = 'Email Verification';
                 $mail->Body    = 'Please use this code to verify & reset your account password: '.$code ;
