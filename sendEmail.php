@@ -23,8 +23,8 @@
                 $mail->setFrom('iamanshulanand@gmail.com', "Anshul"); // sender's email and name
                 $mail->addAddress($Email, "User");  // receiver's email and name
                 $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n"; 
-                $mail->Subject = 'Email verification';
-                $mail->Body    = 'Please use this code to verify your account:'.$code ;
+                $mail->Subject = 'Email Verification';
+                $mail->Body    = 'Please use this code to verify & reset your account password: '.$code ;
 
                 $mail->send();
                 echo 'Message has been sent';
