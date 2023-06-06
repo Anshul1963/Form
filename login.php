@@ -8,7 +8,7 @@
       $pass = $_POST['password'];
 
       if(empty($uname)){
-        $unameErr = "*User Name is Required";
+        $unameErr = "*User Name is equired";
       }
       if(empty($pass)){
         $passErr = "*Password required";

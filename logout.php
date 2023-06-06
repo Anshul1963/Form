@@ -5,7 +5,7 @@
     unset($_SESSION['id']);
     session_destroy();
 
-    if(isset($_POST['login'])){
+    if(isset($_POST['re-login'])){
         header("location: login.php");
     }
 ?>
@@ -66,7 +66,7 @@
     <form action="" method="POST">
         <h2>You have successfully logged out</h2>
         <p>Thanks for using our platform.</p>
-        <button type="submit" name="login"class="btn">Re-Login</button>  
+        <button type="submit" name="re-login"class="btn">Re-Login</button>  
     </form>
   </body>
 </html>

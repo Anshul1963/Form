@@ -263,7 +263,7 @@
             <label>Gender</label>
                 <input type="radio" value="Male" name="gender" class="radio">Male</input>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <input type="radio" value="Female" name="gender" class="radio">Female</input>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <input type="radio" value="Others" name="gender" class="radio"><span style="margin-right:200px;">Others</span> </input>
+                <input type="radio" value="Others" name="gender" class="radio"><span style="margin-right:200px;">Others</span> </input> 
                 <span class="error"><?php echo $genderErr;?></span><br>
             <!-- <label>Message</label> -->
             <textarea name="message" rows="2" cols="30" placeholder="Enter message(if any)"></textarea>
