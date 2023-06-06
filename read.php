@@ -250,7 +250,7 @@
         .page-number{
             font-size:20px;
         }
-        #searchBy{
+        #searchBy, button{
             border:1px solid #ddd;
             background-color:transparent;
             border-radius:5px;
@@ -301,13 +301,13 @@
         <table class="table">
             <thead>
                 <tr class="table-heading">
-                    <th style="width:10%"><a href="?orderBy=name&order=<?php echo $nameNextOrder;?>">Name<?php if($orderBy == "name" && $order == "desc"){echo "↓";}elseif($orderBy == "name" && $order == "asc"){echo "↑";}?></a></th>
-                    <th style="width:17%"><a href="?orderBy=email&order=<?php echo $emailNextOrder;?>">Email<?php if($orderBy == "email" && $order == "desc"){echo "↓";}elseif($orderBy == "email" && $order == "asc"){echo "↑";}?></a></th>
-                    <th style="width: 8%"><a href="?orderBy=mobile&order=<?php echo $mobileNextOrder;?>">Mobile<?php if($orderBy == "mobile" && $order == "desc"){echo "↓";}elseif($orderBy == "mobile" && $order == "asc"){echo "↑";}?></a></th>
-                    <th style="width:12%"><a href="?orderBy=address&order=<?php echo $addressNextOrder; ?>">Address<?php if($orderBy == "address" && $order == "desc"){echo "↓";}elseif($orderBy == "address" && $order == "asc"){echo "↑";}?></a></th>
-                    <th style="width: 6%"><a href="?orderBy=state&order=<?php echo $stateNextOrder; ?>">State<?php if($orderBy == "state" && $order == "desc"){echo "↓";}elseif($orderBy == "state" && $order == "asc"){echo "↑";}?></a></th>
-                    <th style="width: 9%"><a href="?orderBy=gender&order=<?php echo $genderNextOrder; ?>">Gender<?php if($orderBy == "gender" && $order == "desc"){echo "↓";}elseif($orderBy == "gender" && $order == "asc"){echo "↑";}?></a></th>
-                    <th style="width:20%"><a href="?orderBy=message&order=<?php echo $messageNextOrder; ?>">Message<?php if($orderBy == "message" && $order == "desc"){echo "↓";}elseif($orderBy == "message" && $order == "asc"){echo "↑";}?></a></th>
+                    <th style="width:10%"><a href="?orderBy=name&order=<?php echo $nameNextOrder;?>">NAME<?php if($orderBy == "name" && $order == "desc"){echo "↓";}elseif($orderBy == "name" && $order == "asc"){echo "↑";}?></a></th>
+                    <th style="width:17%"><a href="?orderBy=email&order=<?php echo $emailNextOrder;?>">EMAIL<?php if($orderBy == "email" && $order == "desc"){echo "↓";}elseif($orderBy == "email" && $order == "asc"){echo "↑";}?></a></th>
+                    <th style="width: 8%"><a href="?orderBy=mobile&order=<?php echo $mobileNextOrder;?>">MOBILE<?php if($orderBy == "mobile" && $order == "desc"){echo "↓";}elseif($orderBy == "mobile" && $order == "asc"){echo "↑";}?></a></th>
+                    <th style="width:12%"><a href="?orderBy=address&order=<?php echo $addressNextOrder; ?>">ADDRESS<?php if($orderBy == "address" && $order == "desc"){echo "↓";}elseif($orderBy == "address" && $order == "asc"){echo "↑";}?></a></th>
+                    <th style="width: 6%"><a href="?orderBy=state&order=<?php echo $stateNextOrder; ?>">STATE<?php if($orderBy == "state" && $order == "desc"){echo "↓";}elseif($orderBy == "state" && $order == "asc"){echo "↑";}?></a></th>
+                    <th style="width: 9%"><a href="?orderBy=gender&order=<?php echo $genderNextOrder; ?>">GENDER<?php if($orderBy == "gender" && $order == "desc"){echo "↓";}elseif($orderBy == "gender" && $order == "asc"){echo "↑";}?></a></th>
+                    <th style="width:20%"><a href="?orderBy=message&order=<?php echo $messageNextOrder; ?>">MESSAGE<?php if($orderBy == "message" && $order == "desc"){echo "↓";}elseif($orderBy == "message" && $order == "asc"){echo "↑";}?></a></th>
                     <th style="width:12%">Action</th>
                 </tr>
             </thead>
