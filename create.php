@@ -235,7 +235,6 @@
     </nav>
 
     <div class="user-detail">
-        <span class="loginErr"><?php echo $loginErr;?></span>
         <form method="POST" action="">
             <div class="form-title">
                 <h2>ADD DETAILS</h2>
