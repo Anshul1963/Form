@@ -56,7 +56,7 @@
             $error = 1;
         }
         if(($State === "Select State")){
-            $stateErr = "*Select state required";
+            $stateErr = "*State required";
             $error = 1;
         }
     
