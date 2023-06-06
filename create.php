@@ -131,6 +131,7 @@
     .user-detail{
         background-color: #F4F5F4;
         padding-top:10px;
+        padding-bottom:20px;
     }
     form {
         height: 100%;
