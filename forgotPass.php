@@ -73,7 +73,7 @@
         outline:none;
       }
       .a:hover{
-        background-color: #ddd;
+        /* background-color: #ddd; */
         outline:none;
       }
       .a:focus{
