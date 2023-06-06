@@ -69,7 +69,7 @@
                 header("Location: read.php");
             }
             else{
-                echo '<script>alert("Error".$sql.$connection->error)</script>';   
+                echo "ERROR!";   
             }
             $connection->close();
         }     
