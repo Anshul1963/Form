@@ -285,7 +285,7 @@
         <form action="" method="POST">
             <select id="searchBy" name="searchBy" >
                 <option> Search By</option>
-                <option value="name" name="searchBy"> Name</option>
+                <option value="name" name="searchBy">Name</option>
                 <option value="email" name="searchBy">Email</option>
                 <option value="mobile" name="searchBy">Mobile</option>
                 <option value="address" name="searchBy">Address</option>
