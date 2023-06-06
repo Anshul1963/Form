@@ -55,8 +55,8 @@
             $genderErr = "*Select a gender";
             $error = 1;
         }
-        if(empty($State)){
-            $stateErr = "*Select state";
+        if(($State === "Select State")){
+            $stateErr = "*Select state required";
             $error = 1;
         }
     
@@ -253,7 +253,7 @@
             <span class="error"><?php echo $addressErr;?></span><br>
             <!-- <label>State</label> -->
             <select id="state" name="state">
-                <option>Select state</option>
+                <option>Select State</option>
                 <option value="Delhi" name="state">Delhi</option>
                 <option value="Rajasthan" name="state">Rajasthan</option>
                 <option value="Punjab" name="state">Punjab</option>
