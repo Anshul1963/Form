@@ -35,10 +35,6 @@
             $emailErr = "*Invalid Email Address";
             $error = 1;
         }
-        if(empty($Mobile)){
-            $mobileErr = "*Enter Mobile No.";
-            $error = 1;
-        }
         elseif(!preg_match("/^[0-9]*$/",$Mobile)){
             $mobileErr = "*Only numbers are allowed";
             $error = 1;
@@ -55,7 +51,7 @@
             $genderErr = "*Select a gender";
             $error = 1;
         }
-        if(($State)){
+        if(empty($State)){
             $stateErr = "*Select state";
             $error = 1;
         }

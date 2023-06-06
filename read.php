@@ -313,7 +313,7 @@
             </thead>
             <tbody>
                 <?php   
-                    while( $_SESSION['name'] && $data = $result->fetch_assoc()){
+                    while( $_SESSION['name'] && $data = $result->fetch_assoc() ){
                 ?>
 
                 <tr class="table-data">
