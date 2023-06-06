@@ -69,7 +69,7 @@
                 header("Location: read.php");
             }
             else{
-                echo "ERROR!";   
+                echo "Duplicate Email !";   
             }
             $connection->close();
         }     

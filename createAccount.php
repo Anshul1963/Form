@@ -30,7 +30,7 @@
                 header( "Location: login.php");
             }
             else{
-                echo "ERROR";
+                echo "Already registered Email!";
             }
             $connection->close();
         }
