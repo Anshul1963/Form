@@ -144,6 +144,16 @@
         text-decoration: none;
         color: #9155FD;
       }
+      .or{
+          display: flex;
+          flex-direction: row;
+      }
+      .or:before, .or:after {
+          content: "";
+          flex: 1 1;
+          border-top: thin solid #ccf2ff;
+          margin: auto;
+      }
     </style>
   </head>
   <body> 
@@ -159,10 +169,11 @@
         <div id="forgot">
             <div><input type="checkbox" name="newsletter" >&nbsp;Remember Me</div> 
             <a href="forgotPass.php">Forgot Password?</a>
-        </div>
+        </div><br>
         
         <button type="submit" name="login"class="btn">Login</button>
-        <div id="create">New to our platform?&nbsp;<a href="createAccount.php" style="text-decoration:none; color:#9155FD">Create an Account</a><br><br>or</div> 
+        <div id="create">New to our platform?&nbsp;<a href="createAccount.php" style="text-decoration:none; color:#9155FD">Create an Account</a></div> <br>
+        <div class="or">or</div>
         <div id="links">
             <a href="#" style="color: rgb(73, 124, 226);"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i></a>
             <a href="#" style="color: rgb(29, 161, 242);"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a>

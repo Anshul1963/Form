@@ -273,7 +273,8 @@
 
     <div class="container">
         <p>LIST OF USERS</p>
-
+        
+        <!-- SEARCH BOX -->
         <form action="" method="POST">
             <select id="searchBy" name="searchBy" >
                 <option> Search By</option>
@@ -325,6 +326,7 @@
             </tbody>
         </table>
 
+        <!-- PAGINATION LINKS -->
         <?php
             if (!isset($_GET['pageno']) || isset($_GET['pageno']))
             {

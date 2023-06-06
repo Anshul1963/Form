@@ -3,8 +3,7 @@
     session_start();
     $agreeErr = $EmailErr = $unamaErr= $passErr = "";
 
-    if(isset($_POST['signup']))
-    {
+    if(isset($_POST['signup'])){
         $Email = $_POST['email'];
         $uname = $_POST['userName'];
         $pass = $_POST['password'];
@@ -133,6 +132,16 @@
         color: #FF0001;
         font-size:15px;
       } 
+      .or{
+          display: flex;
+          flex-direction: row;
+      }
+      .or:before, .or:after {
+          content: "";
+          flex: 1 1;
+          border-top: thin solid #ccf2ff;
+          margin: auto;
+      }
     </style>
 </head>
 
@@ -150,7 +159,8 @@
         <input type="checkbox" name="agree" class="b">I agree to <a href="#" style="text-decoration:none; color:#9155FD">privacy policy & terms.</a><br>
         <span class="error"><?php echo $agreeErr;?></span><br>
         <button type="signup" name="signup">Sign Up</button>
-        <div id="create">Already have an account?&nbsp;<a href="login.php" style="text-decoration:none; color:#9155FD">Sign in Instead</a><br><br>or</div> 
+        <div id="create">Already have an account?&nbsp;<a href="login.php" style="text-decoration:none; color:#9155FD">Sign in Instead</a></div> <br>
+        <div class="or">or</div>
         <div id="links">
             <a href="#" style="color: rgb(73, 124, 226);"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i></a>
             <a href="#" style="color: rgb(29, 161, 242);"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a>
