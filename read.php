@@ -159,7 +159,7 @@
         }
         table{
             margin:auto;
-            width: 90%;
+            width: 95%;
             box-shadow:0px 2px 10px 0px rgb(58 53 65 / 10%);
             border: none;
             border-collapse: collapse;
@@ -291,14 +291,14 @@
         <table class="table">
             <thead>
                 <tr class="table-heading">
-                    <th style="width:10%"><a href="?orderBy=name&order=<?php echo $nameNextOrder;?>">Name</a></th>
-                    <th style="width:17%"><a href="?orderBy=email&order=<?php echo $emailNextOrder;?>">Email</a></th>
-                    <th style="width: 8%"><a href="?orderBy=mobile&order=<?php echo $mobileNextOrder;?>">Mobile</a></th>
-                    <th style="width:10%"><a href="?orderBy=address&order=<?php echo $addressNextOrder; ?>">Address</a></th>
-                    <th style="width: 6%"><a href="?orderBy=state&order=<?php echo $stateNextOrder; ?>">State</a></th>
-                    <th style="width: 8%"><a href="?orderBy=gender&order=<?php echo $genderNextOrder; ?>">Gender</a></th>
-                    <th style="width:20%"><a href="?orderBy=message&order=<?php echo $messageNextOrder; ?>">Message</a></th>
-                    <th style="width:13%">Action</th>
+                    <th style="width:10%"><a href="?orderBy=name&order=<?php echo $nameNextOrder;?>">Name<?php if($orderBy == "name" && $order == "desc"){echo "↓";}elseif($orderBy == "name" && $order == "asc"){echo "↑";}?></a></th>
+                    <th style="width:17%"><a href="?orderBy=email&order=<?php echo $emailNextOrder;?>">Email<?php if($orderBy == "email" && $order == "desc"){echo "↓";}elseif($orderBy == "email" && $order == "asc"){echo "↑";}?></a></th>
+                    <th style="width: 8%"><a href="?orderBy=mobile&order=<?php echo $mobileNextOrder;?>">Mobile<?php if($orderBy == "mobile" && $order == "desc"){echo "↓";}elseif($orderBy == "mobile" && $order == "asc"){echo "↑";}?></a></th>
+                    <th style="width:12%"><a href="?orderBy=address&order=<?php echo $addressNextOrder; ?>">Address<?php if($orderBy == "address" && $order == "desc"){echo "↓";}elseif($orderBy == "address" && $order == "asc"){echo "↑";}?></a></th>
+                    <th style="width: 6%"><a href="?orderBy=state&order=<?php echo $stateNextOrder; ?>">State<?php if($orderBy == "state" && $order == "desc"){echo "↓";}elseif($orderBy == "state" && $order == "asc"){echo "↑";}?></a></th>
+                    <th style="width: 9%"><a href="?orderBy=gender&order=<?php echo $genderNextOrder; ?>">Gender<?php if($orderBy == "gender" && $order == "desc"){echo "↓";}elseif($orderBy == "gender" && $order == "asc"){echo "↑";}?></a></th>
+                    <th style="width:20%"><a href="?orderBy=message&order=<?php echo $messageNextOrder; ?>">Message<?php if($orderBy == "message" && $order == "desc"){echo "↓";}elseif($orderBy == "message" && $order == "asc"){echo "↑";}?></a></th>
+                    <th style="width:12%">Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -329,13 +329,13 @@
             if (!isset($_GET['pageno']) || isset($_GET['pageno']))
             {
         ?>
-        <div class="page-num">
-            <ul class="pagination" >
-                <li><a href="<?php if($pageNo <= 1){ echo '#'; } else { echo "?pageno=".($pageNo - 1)."&orderBy=".$orderBy."&order=".$order; } ?>">Prev</a></li>
-                <li class="page-number"><?php echo $pageNo;?></li>
-                <li><a href="<?php if($pageNo >= $totalPages){ echo '#'; } else { echo "?pageno=".($pageNo + 1)."&orderBy=".$orderBy."&order=".$order; } ?>">Next</a></li>
-            </ul>
-        </div>
+            <div class="page-num">
+                <ul class="pagination" >
+                    <li><a href="<?php if($pageNo <= 1){ echo '#'; } else { echo "?pageno=".($pageNo - 1)."&orderBy=".$orderBy."&order=".$order; } ?>">Prev</a></li>
+                    <li class="page-number"><?php echo $pageNo;?></li>
+                    <li><a href="<?php if($pageNo >= $totalPages){ echo '#'; } else { echo "?pageno=".($pageNo + 1)."&orderBy=".$orderBy."&order=".$order; } ?>">Next</a></li>
+                </ul>
+            </div>
         <?php 
             }
         ?>
