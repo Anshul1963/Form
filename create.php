@@ -55,7 +55,7 @@
             $genderErr = "*Select a gender";
             $error = 1;
         }
-        if(empty($State)){
+        if(($State)){
             $stateErr = "*Select state";
             $error = 1;
         }
