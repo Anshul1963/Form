@@ -67,7 +67,7 @@
                 header("Location: read.php");
             }
             else{
-                echo "ERROR!";
+                echo "ERROR !";
             }
         }
     }

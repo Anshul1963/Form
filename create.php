@@ -6,7 +6,7 @@
     $loginErr = "";
     if(empty($_SESSION['name']))
     {
-        $loginErr = "Login To Add Data!";
+        $loginErr = "Login To Add Data !";
     }
 
     if(isset($_POST['submit']) && !empty($_SESSION['name']))  {
@@ -189,9 +189,9 @@
         color: #FF0001;
     } 
     .loginErr{
-        color: #FF0001;
+        color:rgba(58, 53, 65, 0.87);;
         text-align: center;
-        font-size:25px;
+        font-size:50px;
         display: block;
     }
     button[type=submit] {
@@ -235,24 +235,29 @@
         </ul>
     </nav>
 
+    <?php
+        if(!isset($_SESSION['name'])){    
+    ?>
+     <span class="loginErr"><?php echo $loginErr;?></span><br>
+    <?php
+        }?>
+    
+    <?php if(isset($_SESSION['name']))
+        {
+    ?>
     <div class="user-detail">
         <form method="POST" action="">
             <div class="form-title">
                 <h2>ADD DETAILS</h2>
             </div>
-            <!-- <label>Full Name</label> -->
             <input type="text" placeholder="Full name" name="name" >
             <span class="error"><?php echo $nameErr;?></span><br>
-            <!-- <label>Email</label> -->
             <input type="text" placeholder="E-mail address" name="email" >
-            <span class="error"><?php echo $emailErr;?></span><br>
-            <!-- <label>Mobile</label> -->
+            <span class="error"><?php echo $emailErr;?></span><br>  
             <input type="text" placeholder="Mobile no." name="mobile" >
             <span class="error"><?php echo $mobileErr;?></span><br>
-            <!-- <label>Address</label> -->
             <input type="text" placeholder="Permanent Address" name="address" >
             <span class="error"><?php echo $addressErr;?></span><br>
-            <!-- <label>State</label> -->
             <select id="state" name="state">
                 <option>Select State</option>
                 <option value="Delhi" name="state">Delhi</option>
@@ -266,12 +271,12 @@
                 <input type="radio" value="Female" name="gender" class="radio">Female</input>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <input type="radio" value="Others" name="gender" class="radio"><span style="margin-right:200px;">Others</span> </input> 
                 <span class="error"><?php echo $genderErr;?></span><br>
-            <!-- <label>Message</label> -->
             <textarea name="message" rows="2" cols="30" placeholder="Message(if any)"></textarea>
             <label style="display:inline;">Newsletter:</label>
             <input type="checkbox" name="newsletter" class="radio"><br>
             <button type="submit" name="submit" value="submit">Submit</button>
         </form>
     </div>
+    <?php } ?>
 </body>
 </html>
